@@ -1,0 +1,36 @@
+.watrchlistsection{
+  background: url('../images//services_bg.jpg');
+    height: 1000px;
+    padding: 30px 0;
+}
+.watrchlistsection .main-heading{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.movies-count{
+    display: block;
+    background-color: green;
+    padding: 5px 15px;
+    font-size: 1.12rem;
+    font-weight: 600;
+    border-radius: 999px;
+    color: wheat;
+}
+.watrchlistsection h1{
+    color: white;
+    margin: 0;
+}
+.movie-grid{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 30px;
+}
+.nomovies{
+    font-size: 3rem;
+    text-align: center;
+}

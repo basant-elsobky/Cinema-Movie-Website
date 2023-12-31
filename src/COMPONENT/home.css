@@ -1,0 +1,8 @@
+.homesection{
+    background-image: url(../COMPONENT/images//banner_bg01.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 700px;
+padding-bottom: 20px;
+}

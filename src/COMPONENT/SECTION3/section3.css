@@ -1,0 +1,151 @@
+.section3 {
+    background: url('../images//services_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+.section3 row {
+    align-items: center;
+}
+
+.section3 .col-lg-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 50px;
+
+}
+
+@media (min-width: 992px) {
+
+    .section3 .col-lg-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+.services-iamge-wrap {
+    position: relative;
+
+}
+
+.services-iamge-wrap img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+@media (max-width: 1199.98px) {
+
+    .services-iamge-wrap .download-btn {
+        right: -65px;
+    }
+}
+
+.services-iamge-wrap .download-btn {
+    background: #e4d804;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #14141d;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 65px;
+    transform: rotate(90deg);
+    padding: 43px 49px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section3 .section-title {
+    margin-bottom: 20px;
+
+}
+
+.section3 p {
+    margin-bottom: 45px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #bcbcbc;
+}
+
+.section3 .section-title .title {
+
+    margin-bottom: 0;
+    font-size: 36px;
+}
+
+.section3 .col-lg-6 .sub-title {
+    padding-left: 53px;
+    color: #e4e2e2;
+    display: block;
+    line-height: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.section3 .col-lg-6 .sub-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 40px;
+    height: 3px;
+    background: #e4d804;
+
+}
+.service-list ul li{
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #38373c;
+}
+.service-list .icon i {
+    box-sizing: border-box;
+    width: 95px;
+    height: 95px;
+    line-height: 93px;
+    text-align: center;
+    border: 1px dashed #e4d804;
+    border-radius: 50%;
+    flex: 0 0 95px;
+    position: relative;
+    font-size: 38px;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 3ms ease;
+}
+
+.service-list .icon i:hover {
+    background-color: yellow;
+}
+.service-list h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 700;
+
+}
+.service-list p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #bcbcbc;
+    margin-bottom: 0;
+
+
+}

@@ -1,0 +1,59 @@
+.section2 {
+    background-color: black;
+    padding: 100px;
+ 
+ 
+}
+
+.section2content .sub-title {
+    display: block;
+    line-height: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: var(--maincolor);
+}
+.section2content .title{
+    margin-bottom: 0;
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: normal;
+}
+.tr-movie-menu2-active button:active{
+    text-shadow: 0px 3px 24px rgba(228, 216, 4, 0.5) ; 
+    color: #fff; 
+    border-color: #e4d804;
+}
+
+.tr-movie-menu2-active button:hover{
+    text-shadow: 0px 3px 24px rgba(228, 216, 4, 0.5);
+    color: #fff;
+    border-color: #e4d804;
+}
+.tr-movie-menu2-active button {
+   
+   
+    border-radius: 50px;
+    background: #20212b;
+    font-size: 12px;
+    font-weight: 600;
+   margin-left: 10px !important;
+    color: #e3dfdf;
+    border: 2px solid #2d303d;
+    padding: 11px 27px;
+    margin-bottom: 20px !important;
+    transition: none !important;
+}
+
+.tr-movie-menu2-active{
+display: flex;
+align-items: center;
+justify-content: center;
+}

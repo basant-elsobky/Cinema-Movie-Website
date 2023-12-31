@@ -1,0 +1,38 @@
+.section5 {
+    background: url(../images//tv_series_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 120px 0 70px;
+
+}
+
+
+.subtitle {
+    color: #e4d804 !important;
+    display: block;
+    line-height: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.section5 h2 {
+    margin-bottom: 0;
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 700;
+}
+.section5 .row{
+    
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

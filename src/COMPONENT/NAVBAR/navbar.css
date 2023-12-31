@@ -1,0 +1,70 @@
+.navbar-nav .nav-link {
+    color: white !important;
+  } 
+.navbar-nav .nav-link:hover {
+    color: yellow !important;
+  } 
+  .navbar-nav .nav-item.active .nav-link {
+    color: yellow !important;
+  }
+  .navbar-nav .nav-link.active {
+    color: #ffcc00 !important; /* Set your desired color */
+  }
+
+.header .container{
+    position:'fixed';
+    width: 100%;
+    
+}
+.navbar-toggler span {
+    color: white !important;
+
+}
+
+.collapse li a:hover {
+    color: var(--maincolor);
+}
+
+.header_action button {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 34px;
+    cursor: pointer;
+    user-select: none;
+    background: #12151e none repeat scroll 0 0;
+    border: 2px solid #e4d804;
+    border-radius: 50px;
+    color: #e3dfdf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 16px 34px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.header_action button:hover {
+    background-color: var(--maincolor);
+    color: black;
+}
+
+.search {
+    padding-right: 20px;
+    border-right: 1px solid gray;
+}
+
+.earth {
+    padding-left: 20px;
+    padding-right: 30px;
+
+    color: yellow !important;
+}

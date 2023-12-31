@@ -1,0 +1,8 @@
+.add-page{
+    background: url('../images//services_bg.jpg');
+    height: 1000px;
+}
+.add-page li{
+    text-decoration: none;
+    list-style: none;
+}
