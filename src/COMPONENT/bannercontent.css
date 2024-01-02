@@ -1,4 +1,9 @@
-
+.section1{
+    background-image: url(../COMPONENT/images/banner_bg01.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+min-height: 800px;
+}
 .watchnow{
     cursor: pointer;
     text-decoration: none;
@@ -21,6 +26,7 @@
     vertical-align: middle;
     white-space: nowrap;
     max-width: 200px;
+    margin-bottom: 50px;
 }
 .watchnow:hover{
     background-color: var(--maincolor);
@@ -29,6 +35,7 @@
 
 .bannercontent{
  padding-top: 250px;
+
 }
 @media (max-width: 1199.98px){
     .bannercontent .sub-title {
@@ -37,6 +44,7 @@
     .bannercontent .title{
         font-size: 42px;
     }
+    
 }
 .bannercontent .sub-title {
     font-size: 26px;
@@ -56,9 +64,27 @@
 }
 .meta{
     margin-bottom: 35px;
+
 }
+
+.meta ul{
+    display: flex;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .quality span,
+  .category a,
+  .release-time span {
+    margin-right: 10px;
+  }
+  
+ 
 .meta ul li{
     display: flex;
+    flex-direction: row !important;
     align-items: center;
     margin-bottom: 15px;
     margin-right: 18px;
@@ -101,3 +127,8 @@
 .release-time i{
     color: var(--maincolor);
 }
+@media (max-width: 768px) {
+    .meta ul{
+      flex-direction: column;
+    }
+  }

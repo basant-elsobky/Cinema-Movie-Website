@@ -1,22 +1,20 @@
 import './navbar.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../images/logo.png';
-import { HashLink as Link } from 'react-router-hash-link';
+
+
+
 import { useEffect, useState } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
 
 function MyNavbar() {
-
   const [navbarOpen, setNavbarOpen] = useState(false);
   const location = useLocation();
+  const [backgroundColor, setBackgroundColor] = useState();
 
   useEffect(() => {
 
     setNavbarOpen(false);
-
-
+ 
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -24,60 +22,76 @@ function MyNavbar() {
     setNavbarOpen(!navbarOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+  
+      const scrollY = window.scrollY;
+
+  
+      if (scrollY > 100) {
+        setBackgroundColor('#171D22');
+      } else {
+        setBackgroundColor();
+      }
+    };
+
+   
+    window.addEventListener('scroll', handleScroll);
+
  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   return (
-    <div className="header" >
-      <Navbar 
-        expand="lg"
-        className={`text-uppercase fixed-top `}
-      >
-        <Container>
-          <Link to='/' className="navbar-brand">
-            <img src={logo} alt="Logo" />
-          </Link>
+  
+   
+    <div className='header' style={{backgroundColor}}>
+    <div className='container '  >
+      <nav className="navbar navbar-expand-lg " >
+        <div className="container-fluid">
+          <NavLink to='/' className="navbar-brand ordered-3" href="#">
+          <img src={logo}/>
+          </NavLink>
+          <button  onClick={toggleNavbar} className="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className={`collapse navbar-collapse order-lg-2 justify-content-center order-3${navbarOpen ? ' show' : ''}`} id="navbarNav">
+            <ul className="navbar-nav mb-2 mb-lg-0">
+              <li className="nav-item ordered-2">
+                <NavLink to='/' className="nav-link " aria-current="page" href="#"  onClick={toggleNavbar}>Home</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to='/watchlist' className="nav-link" href="#"   onClick={toggleNavbar}> Watchlist</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to='/watched' className="nav-link" href="#"  onClick={toggleNavbar}>    Watched</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to='/add' className="nav-link" href="#"  onClick={toggleNavbar}>  Add</NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            onClick={toggleNavbar}
-            style={{ borderColor: 'yellow' }}
-          />
-          <Navbar.Collapse id="responsive-navbar-nav" className={`justify-content-between${navbarOpen ? ' show' : ''}`}>
-            <Nav className="mx-auto text-center">
-              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/' activeClassName="active" >
-                Home
-              </Nav.Link>
-
-              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/watchlist' activeClassName="active" >
-                Watchlist
-              </Nav.Link>
-              <Nav.Link   onClick={toggleNavbar} as={NavLink} to='/watched' activeClassName="active" >
-                Watched
-              </Nav.Link>
-              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/add' activeClassName="active" >
-                Add
-              </Nav.Link>
-              <Nav.Link   onClick={toggleNavbar} as={Link} smooth to='#contactus' >
-                Contacts
-              </Nav.Link>
-            </Nav>
-
-            <div className="header_action d-none d-md-flex">
-              <div className="lista d-flex mt-3">
-                <a className="ms-3">
-                  <i className="fa-solid fa-magnifying-glass search" style={{ color: 'white' }} />
-                </a>
-                <div>
-                  <i className="fa-solid fa-earth-europe earth" style={{ color: 'white' }} />
-                </div>
-              </div>
-              <button className="ms-3">Sign In</button>
+        <div className="header_action d-none d-md-flex">
+          <div className="lista d-flex mt-3">
+            <a className="ms-3">
+              <i className="fa-solid fa-magnifying-glass search" style={{ color: 'white' }} />
+            </a>
+            <div>
+              <i className="fa-solid fa-earth-europe earth" style={{ color: 'white' }} />
             </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+          </div>
+          <button className="ms-3">Sign In</button>
+        </div>
+      </nav>
     </div>
+  </div>
   );
 }
 

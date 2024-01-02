@@ -9,20 +9,20 @@ import Section5 from './SECTION5/Section5'
 import Section6 from './SECTION6/Section6'
 import Footer from './FOOTER/Footer'
 const Homee = () => {
-  
-    
+
+
   return (
     <>
-    <div className='homesection'  >
-   <Bannercontent/>
 
-    </div>
-<Section2/>
-<Section3/>
-<Section4/>
-<Section5/>
-<Section6/>
-<Footer/>
+      <Bannercontent />
+
+
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Footer />
     </>
   )
 }

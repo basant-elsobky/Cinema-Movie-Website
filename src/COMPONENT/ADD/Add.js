@@ -36,8 +36,10 @@ const Add = () => {
     <div className='container '>
       <div className=' d-flex align-items-center justify-content-center'>
         <div className='add-content'>
-          <div className='input-container'>
-            <input
+          <div className='input-container'
+                     
+>
+            <input 
               type='text'
               placeholder='Search for a movie'
               value={searchValue}

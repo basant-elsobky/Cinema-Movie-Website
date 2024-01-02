@@ -7,7 +7,7 @@ export const MovieControls = ({ movie, type }) => {
     const {Moviesdispatch} = useContext(GlobalContext)
     const moviecontext =useMoviecontext()
     return (
-      <div className='inner-card-controls'>
+      <div className='inner-card-controls d-none d-md-block'>
         {type === 'watchlist' &&
           <>
             <button
