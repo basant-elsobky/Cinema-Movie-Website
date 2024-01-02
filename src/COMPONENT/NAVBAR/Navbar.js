@@ -1,12 +1,16 @@
 import './navbar.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../images/logo.png';
-
+import { Modal} from 'react-bootstrap';
 
 
 import { useEffect, useState } from 'react';
+import Login from './Login';
 
 function MyNavbar() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const location = useLocation();
   const [backgroundColor, setBackgroundColor] = useState();
@@ -80,14 +84,19 @@ function MyNavbar() {
 
         <div className="header_action d-none d-md-flex">
           <div className="lista d-flex mt-3">
-            <a className="ms-3">
+            <NavLink to='/add' className="ms-3">
               <i className="fa-solid fa-magnifying-glass search" style={{ color: 'white' }} />
-            </a>
+            </NavLink>
             <div>
               <i className="fa-solid fa-earth-europe earth" style={{ color: 'white' }} />
             </div>
           </div>
-          <button className="ms-3">Sign In</button>
+          <button onClick={handleShow} className="ms-3">Sign In</button>
+          <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                </Modal.Header>
+                <Login />
+              </Modal>
         </div>
       </nav>
     </div>

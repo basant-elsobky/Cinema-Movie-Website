@@ -27,9 +27,9 @@ setcontent(<Tvshowslist/>)
                     </div>
                 </div>
             </div>
-            <div className='d-flex   row justify-content-center'>
-                <div className='col-lg-8 mt-4'>
-                    <div className='d-flex tr-movie-menu2-active text-center ' style={{maxWidth:'70px'}}>
+            <div className='d-flex  row  align-items-center justify-content-center'>
+                <div className='col-lg-8 mt-4 ' >
+                    <div className='d-flex tr-movie-menu2-active text-center ' >
                         <a onClick={tvshow}  to='/'>
                             <button>TV Shows</button>
                         </a>
