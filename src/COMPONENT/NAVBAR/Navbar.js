@@ -8,82 +8,57 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
 function MyNavbar() {
+
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [navbarBackground, setNavbarBackground] = useState('transparent');
   const location = useLocation();
 
   useEffect(() => {
-    // Close the Navbar when navigating to another website
-    const handleExternalLinkClick = () => {
-      setNavbarOpen(false);
-    };
 
-    document.addEventListener('click', handleExternalLinkClick);
-
-    return () => {
-      document.removeEventListener('click', handleExternalLinkClick);
-    };
-  }, []);
-
-  useEffect(() => {
     setNavbarOpen(false);
+
+
     window.scrollTo(0, 0);
   }, [location]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > 0) {
-        setNavbarBackground('#171D22');
-      } else {
-        setNavbarBackground('transparent');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
 
+ 
+
+
   return (
     <div className="header" >
-      <Navbar style={{ backgroundColor: navbarBackground }} expand="lg" 
-        className={`text-uppercase fixed-top ${navbarOpen ? 'show' : ''}`}>
+      <Navbar 
+        expand="lg"
+        className={`text-uppercase fixed-top `}
+      >
         <Container>
           <Link to='/' className="navbar-brand">
             <img src={logo} alt="Logo" />
           </Link>
 
           <Navbar.Toggle
-  aria-controls="responsive-navbar-nav"
-  onClick={toggleNavbar}
-  style={{ borderColor: 'yellow' }} 
-/>
-          <Navbar.Collapse   id="responsive-navbar-nav" className={`justify-content-between${navbarOpen ? ' show' : ''}`}>
+            aria-controls="responsive-navbar-nav"
+            onClick={toggleNavbar}
+            style={{ borderColor: 'yellow' }}
+          />
+          <Navbar.Collapse id="responsive-navbar-nav" className={`justify-content-between${navbarOpen ? ' show' : ''}`}>
             <Nav className="mx-auto text-center">
-              <Nav.Link as={NavLink} to='/' activeClassName="active" exact>
+              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/' activeClassName="active" >
                 Home
               </Nav.Link>
-              <Nav.Link as={NavLink} to='/movie'>
-                Movie
-              </Nav.Link>
-              <Nav.Link as={NavLink} to='/watchlist' activeClassName="active">
+
+              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/watchlist' activeClassName="active" >
                 Watchlist
               </Nav.Link>
-              <Nav.Link as={NavLink} to='/watched' activeClassName="active">
+              <Nav.Link   onClick={toggleNavbar} as={NavLink} to='/watched' activeClassName="active" >
                 Watched
               </Nav.Link>
-              <Nav.Link as={NavLink} to='/add' activeClassName="active">
+              <Nav.Link  onClick={toggleNavbar}  as={NavLink} to='/add' activeClassName="active" >
                 Add
               </Nav.Link>
-              <Nav.Link as={Link}  smooth to='#contactus'>
+              <Nav.Link   onClick={toggleNavbar} as={Link} smooth to='#contactus' >
                 Contacts
               </Nav.Link>
             </Nav>
